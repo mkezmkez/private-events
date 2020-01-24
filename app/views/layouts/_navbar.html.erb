@@ -1,0 +1,7 @@
+<div class="nav bg-danger px-3 py-3">
+<% if user %>
+  <%=  user.name  %>
+<% else %>
+  <%= link_to "Log in", new_session_path %>
+<% end %>
+</div>
