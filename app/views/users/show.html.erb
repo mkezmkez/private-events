@@ -1,8 +1,8 @@
 <div class="row">
-    <div class="col-6 offset-3">
+    <div class="col-12">
         <div class="row">
-            <div class="col-2">
-                <img src="https://avatars3.githubusercontent.com/u/51313750?s=400&v=4" alt="">
+            <div class="col-4">
+                <img class='img-fluid' src="https://avatars3.githubusercontent.com/u/51313750?s=400&v=4" alt="">
             </div>
             <div class="col-6">
                 <h2><%= @user.name %></h2>
@@ -11,7 +11,7 @@
                 <% @user.created_events.each do |event| %>
                     <div class= "col-12">
                       <h1> <%= event.title %> </h1>
-                      <h1> <%= event.date %> </h1>
+                      <h1> At <%= event.date.day %> | <%= event.date.hour %>h </h1>
                       <h1> <%= event.location %> </h1>
                       <h1> <%= event.description %> </h1>
                     </div>
