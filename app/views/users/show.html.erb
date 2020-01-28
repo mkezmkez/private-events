@@ -15,7 +15,29 @@
                       <h1> <%= event.location %> </h1>
                       <h1> <%= event.description %> </h1>
                     </div>
-                <% end %>
+              <% end %>
+              <div class="col-12">
+                  <div class="row">
+                    <div class="col-6">
+
+                      <h3>Upcoming events:</h3>
+                      <ul>
+                        <% @upcoming_events.each do |uevent| %>
+                          <li><%= uevent.description %> | <%= uevent.date.day %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                    <div class="col-6">
+
+                      <h3>Previous Events</h3>
+                      <ul>
+                        <% @previous_events.each do |uevent| %>
+                          <li><%= uevent.description %> | <%= uevent.date.day %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>

@@ -5,4 +5,6 @@ class Event < ApplicationRecord
   has_many :guests, through: :attendances, source: :attendee
   #has_many :attendees, through: :guests, source: :attendee
 
+  scope :previous_events, -> { where('date < ?', Time.now) }
+  scope :upcoming_events, -> { where('date > ?', Time.now) }
 end

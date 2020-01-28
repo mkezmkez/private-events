@@ -1,2 +1,8 @@
-<h1 class="title">Events List</h1>
-<h2><%= @event.creator.name %></h2>
+<h1 class="title">Event List</h1>
+<h2>Organizer: <%= @event.creator.name %> productions</h2>
+<h3>Attendees:</h3>
+<ul>
+  <% @event.guests.each do |guest| %>
+    <li><%= guest.name %></li>
+  <% end %>
+</ul>
