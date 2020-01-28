@@ -1,1 +1,18 @@
 @import "rails_bootstrap_forms";
+
+.topbar {
+    img {
+        height: 80px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.nav-link {
+    border-radius: 0 !important;
+    border-right: 1px solid darkgray;
+}
+
+.nav-link.active {
+    background-color: whitesmoke !important;
+}
