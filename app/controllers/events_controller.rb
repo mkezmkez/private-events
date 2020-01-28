@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
+  before_action :require_login, only: [:create, :new]
+
   def index
     @events = Event.all
   end
 
   def show
     @event = Event.find_by(id: params[:id])
-
-
   end
 
   def new
@@ -25,6 +25,19 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:description)
+    params.require(:event).permit(:description, :date, :title, :location, :image)
+  end
+
+  def logged_in?
+    if @user
+    session[:user_id] == @user.id
+    end
+  end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to new_session_url # halts request cycle
+    end
   end
 end

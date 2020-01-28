@@ -1,5 +1,15 @@
 <h1 class="title">Event List</h1>
 <h2>Organizer: <%= @event.creator.name %> productions</h2>
+
+<div>  
+    <img src="https://i.picsum.photos/id/<%=rand(1...999)%>/200/300.jpg">
+    <h1> <%= @event.title %> </h1>
+    <h1> <%= @event.date %> </h1>
+    <h1> <%= @event.location %> </h1>
+    <h1> <%= @event.description %> </h1>
+</div>
+
+
 <h3>Attendees:</h3>
 <ul>
   <% @event.guests.each do |guest| %>
