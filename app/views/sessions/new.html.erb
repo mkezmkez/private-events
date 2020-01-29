@@ -3,18 +3,16 @@
         
         <% flash.each do |name, msg| -%>
             <%= content_tag :div, msg, class: name %>
-          <% end -%>
+          <% end %>
           <div class="mt-5">
           
         <%= bootstrap_form_for(:session, url: sessions_path) do |f| %>
-            <p class = "h3 text-danger"> Login with either: </p>
+            <p class = "h3 text-warning pb-3"> login with any of these</p>
             <%= f.text_field :name %>
-            <p>Or</p>
             <%= f.text_field :username %>
-            <p>Or</p>
             <%= f.email_field :email %>
 
-            <%= f.submit "Log in" %>
+            <%= f.submit "Log in", class: "btn btn-warning d-flex justify-content-end" %>
         <% end %>
         </div>
     </div>

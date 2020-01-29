@@ -1,18 +1,20 @@
-<h1 class="title">Event List</h1>
-<h2>Organizer: <%= @event.creator.name %> productions</h2>
-
-<div>  
-    <img src="https://i.picsum.photos/id/<%=rand(1...999)%>/200/300.jpg">
-    <h1> <%= @event.title %> </h1>
-    <h1> <%= @event.date %> </h1>
-    <h1> <%= @event.location %> </h1>
-    <h1> <%= @event.description %> </h1>
+<h1 class="title text-warning h4 p-0">your new event details</h1>
+<div class="d-flex bg-dark bordercard">
+  <img src="https://i.picsum.photos/id/<%=rand(1...10)%>/200/300.jpg">
+  <div class="card bg-dark">
+   <span class="card-body mt-4">
+     <p class= "h3 card-title text-warning"> <%= @event.title %> </p>
+     <div class= "card-title text-light my-4"> <span class="text-warning"> when: </span> <%= @event.date.to_datetime.strftime("%d/%m/%Y") %> <span class="text-warning"> starts at: </span> <%= @event.date.to_time.strftime("%T") %></p>
+     <div class="my-4"><span class="text-warning my-5"> location:  </span> <p class="h6"> <%= link_to @event.location, @event.location %> </p>  </div>
+     <div class="my-4"><span class="text-warning my-5"> description:  </span> <p> <%= @event.description %> </p></div>
+    </span>
+  </div>
 </div>
-
-
-<h3>Attendees:</h3>
+<div>
+<p class= "h5 card-title text-warning card-body mt-4"> Attendees:</p>
 <ul>
   <% @event.guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li class="text-light"> <%= link_to guest.name, user_path(guest)%></li>
   <% end %>
 </ul>
+</div>

@@ -1,7 +1,8 @@
-<h1 class= "h3 text-danger">Don't miss out on the upcoming events</h1>
+<h1 class= "h3 text-warning"> upcoming events </h1>
 
 <% @events.each do |event| %>
     <div class="card">
+      <%= event.image %>
       <%= event.title %>
       <%= event.date %>
       <%= event.location %>
