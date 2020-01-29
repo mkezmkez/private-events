@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @upcoming = @events.where(date: (Time.now-1.year)..(Time.now-3600))
   end
 
   def show
