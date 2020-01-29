@@ -66,10 +66,10 @@ body {
 }
 
 .topbanner {
-    background-image: url("bgimg.jpg");
-    height: 400px;
-    background-repeat: no-repeat;
+    height: 500px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(231, 155, 40, 0.336)), url("5434.jpg");
+    height: 500px;
     background-size: cover;
-    background-position-y: -40px;
+    background-position-y: -280px;
     left: 0;
 }
