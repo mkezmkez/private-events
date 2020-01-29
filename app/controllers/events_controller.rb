@@ -3,6 +3,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @past_events = @events.where(date: (Time.now-1.year)..(Time.now-3600))
+    @upcoming_events = @events.where(date: (Time.now-3600)..(Time.now+1.year))
+    @event_image = "https://i.picsum.photos/id/#{rand(1...100)}/200/300.jpg"
   end
 
   def show
