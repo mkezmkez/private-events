@@ -4,8 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user ||= User.find_by(session_params.select{ |k,v| !v.empty? }.keys.first => session_params.select{ |k,v| !v.empty? }.values.first)
-    @user ||= User.find_by(session_params.select{ |k,v| !v.empty? }.keys.last => session_params.select{ |k,v| !v.empty? }.values.last)
+    @user ||= nil
+    @user ||= User.find_by(session_params.select{ |k,v| !v.empty? }.keys.first || :name => session_params.select{ |k,v| !v.empty? }.values.first)
+    @user ||= User.find_by(session_params.select{ |k,v| !v.empty? }.keys.last || :username => session_params.select{ |k,v| !v.empty? }.values.last)
     if @user
       session[:user_id] = @user.id
       redirect_to root_path
