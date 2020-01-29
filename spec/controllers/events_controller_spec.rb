@@ -21,12 +21,7 @@ RSpec.describe EventsController, type: :controller do
   end
 
   describe "GET #show" do
-    subject {create(:event, id: create(:user).id)}
-
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
-    end
+    subject { create(:event, id: create(:user).id) }
 
     it 'assigns the requested event to @event' do
       get :show, params: { id: subject }
@@ -41,16 +36,16 @@ RSpec.describe EventsController, type: :controller do
   end
 
   describe 'GET #new' do
-    it 'returns http success' do
-      get :new
-      expect(response).to have_http_status(:success)
-    end
     it 'creat an empty event @event' do
+      user = create(:user)
+      log_in(user)
       get :new
 
-      expect(assigns(:event).description).to be_nil
+      expect(assigns(:event).id).to be_nil
     end
+
     it 'renders :new template' do
+      log_in(create(:user))
       get :new
 
       expect(response).to render_template :new
