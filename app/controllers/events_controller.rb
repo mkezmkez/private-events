@@ -3,8 +3,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    @past_events = @events.where(date: (Time.now-1.year)..(Time.now-3600))
-    @upcoming_events = @events.where(date: (Time.now-3600)..(Time.now+1.year))
+    @past_events = @events.where(date: (Time.now - 1.year)..(Time.now - 3600))
+    @upcoming_events = @events.where(date: (Time.now - 3600)..(Time.now + 1.year))
     @event_image = "https://i.picsum.photos/id/#{rand(1...100)}/200/300.jpg"
   end
 
@@ -37,9 +37,9 @@ class EventsController < ApplicationController
   end
 
   def require_login
-    unless logged_in?
-      flash[:error] = "You must be logged in to access this section"
-      redirect_to new_session_url
-    end
+    return if logged_in?
+
+    flash[:error] = 'You must be logged in to access this section'
+    redirect_to new_session_url
   end
 end

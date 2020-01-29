@@ -1,7 +1,6 @@
 require 'rails_helper'
 
- RSpec.describe 'the signup process', type: :feature, js: true do
-
+RSpec.describe 'the signup process', type: :feature, js: true do
   scenario 'has a new user page' do
     visit new_user_path
     sleep(1)
@@ -24,7 +23,5 @@ require 'rails_helper'
       sleep(1)
       expect(page).to have_content 'Master Luis'
     end
-
   end
-
 end
