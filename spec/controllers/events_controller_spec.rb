@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe EventsController, type: :controller do
-
-  describe "GET #index" do
-    it "returns http success" do
+  describe 'GET #index' do
+    it 'returns http success' do
       get :index
       expect(response).to have_http_status(:success)
     end
@@ -20,7 +19,7 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 
-  describe "GET #show" do
+  describe 'GET #show' do
     subject { create(:event, id: create(:user).id) }
 
     it 'assigns the requested event to @event' do
@@ -60,13 +59,13 @@ RSpec.describe EventsController, type: :controller do
 
       it 'save an event to the database' do
         log_in(@user)
-        expect {
-          post :create, params: { event: FactoryBot.attributes_for(:event, id: @user.id) } }.to change(Event, :count).by(1)
-
+        expect do
+          post :create, params: { event: FactoryBot.attributes_for(:event, id: @user.id) }
+        end .to change(Event, :count).by(1)
       end
       it 'redirects to the #show event' do
         log_in @user
-        post :create, params: { event: attributes_for(:event, id: @user.id)}
+        post :create, params: { event: attributes_for(:event, id: @user.id) }
         expect(response).to redirect_to Event.last
       end
     end
@@ -77,16 +76,15 @@ RSpec.describe EventsController, type: :controller do
       end
       it 'does not save the event to the DB' do
         log_in(@user)
-        expect{
-          post :create, params: { event: attributes_for(:event, id: nil, description: '')}
-          }.to_not change(Event, :count)
+        expect do
+          post :create, params: { event: attributes_for(:event, id: nil, description: '') }
+        end.to_not change(Event, :count)
       end
       it 'renders the :new template' do
         log_in(@user)
-        post :create, params: { event: attributes_for(:event, id: nil, description: '')}
+        post :create, params: { event: attributes_for(:event, id: nil, description: '') }
         expect(response).to render_template :new
       end
     end
   end
-
 end

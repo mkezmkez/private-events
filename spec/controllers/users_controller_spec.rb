@@ -10,12 +10,11 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe 'GET #show' do
-
-    it "assigns the requested user to @user" do
+    it 'assigns the requested user to @user' do
       user = FactoryBot.create(:user)
       get :show, params: { id: user }
       expect(assigns(:user)).to eq(user)
-    end 
+    end
 
     it 'returns http success' do
       user = FactoryBot.create(:user)
@@ -25,7 +24,7 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  describe "POST #create" do
+  describe 'POST #create' do
     context 'with valid params' do
       it 'redirects to users show path' do
         post :create, params: { user: FactoryBot.attributes_for(:user) }
