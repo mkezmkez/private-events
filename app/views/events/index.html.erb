@@ -1,5 +1,6 @@
+<div class= "container" >
 <h1 class= "h3 text-warning"> upcoming events </h1>
-<% @events.each do |event| %>
+<% @upcoming_events.each do |event| %>
   <div class="row bg-dark bordercard">
     <img class="col-2" src="https://i.picsum.photos/id/<%=rand(1...10)%>/200/300.jpg">
     <div class="col-9 card bg-dark">
@@ -14,8 +15,8 @@
   </div>
 <% end %>
 
-<h1 class= "h3 text-warning"> past events </h1>
-<% @events.each do |event| %>
+<h1 class= "h3 text-warning mt-5"> previous events </h1>
+<% @past_events.each do |event| %>
   <div class="row bg-dark bordercard">
     <img class="col-2" src="https://i.picsum.photos/id/<%=rand(1...10)%>/200/300.jpg">
     <div class="col-9 card bg-dark">
@@ -29,3 +30,4 @@
     </div>
   </div>
 <% end %>
+</div>
