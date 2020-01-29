@@ -1,11 +1,20 @@
 <h1 class= "h3 text-warning"> upcoming events </h1>
-
-<% @events.each do |event| %>
-    <div class="card">
-      <%= event.image %>
-      <%= event.title %>
-      <%= event.date %>
-      <%= event.location %>
-      <%= event.description %>
+<div class="row d-flex-column">
+  <% @events.each do |event| %>
+    <div class="row bg-dark bordercard">
+      <img class="col-2" src="https://i.picsum.photos/id/<%=rand(1...10)%>/200/300.jpg">
+      <div class="col-9 card bg-dark">
+        <div class="card-body mt-4">
+          <p class= "h3 card-title text-warning"> <%= event.title %> </p>
+          <div class= "card-title text-light my-4"> <span class="text-warning"> when: </span> <%= event.date.to_datetime.strftime("%d/%m/%Y") %> <span class="text-warning"> starts at: </span> <%= event.date.to_time.strftime("%T") %></p>
+          <div class="my-4"><span class="text-warning my-5"> location:  </span>
+            <p class="h6"> <%= link_to event.location, event.location %> </p>
+          </div>
+          <div class="my-4"><span class="text-warning my-5"> description:  </span>
+            <p> <%= event.description %> </p>
+          </div>
+        </div>
+      </div>
     </div>
-<% end %>
+  <% end %>
+</div>
