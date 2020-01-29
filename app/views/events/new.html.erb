@@ -1,0 +1,11 @@
+
+<%= bootstrap_form_for(@event) do |f| %>
+  <%=  f.text_field :title, label: "Name your event"  %>
+  <%=  f.datetime_select :date, label: "When is it happening?" %>
+  <%=  f.text_field :location, label: "Where?" %>
+  <%=  f.text_area :description, label: "Share the deets:" %>
+  <%=  f.file_field :image, label: "Upload a cover photo for your event, .jpg or .png only" %>
+  
+  <%= f.submit 'Create Event', class: "btn btn-warning" %>
+
+<% end %>

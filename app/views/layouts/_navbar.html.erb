@@ -1,0 +1,26 @@
+<div class="topbar bg-clear mb-5">
+  <div class="d-flex justify-content-between" >
+    <%= image_tag("eventwo.jpg") %>
+    <ul class="nav nav-pills justify-content-around flex-nowrap ">
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, class: "nav-link bg-white text-dark text-nowrap" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'All events', events_path, class: "nav-link bg-white text-dark text-nowrap" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to 'Add event', new_event_path, class: "nav-link active text-clear text-nowrap" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to 'Sign up', new_user_path, class: "nav-link bg-white text-dark text-nowrap" %>
+      </li>
+      <li class="nav-item">
+        <% if user %>
+          <%=  link_to "#{user.name}'s Profile", user_path(user), class: "nav-link bg-white text-dark"  %>
+        <% else %>
+          <%= link_to "Log in", new_session_path, class: "nav-link bg-white text-dark"  %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

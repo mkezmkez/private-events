@@ -1,0 +1,66 @@
+@import "rails_bootstrap_forms";
+
+* {
+    font-family: 'Martel', serif;
+    
+}
+label {
+    color: wheat;
+}
+
+a {
+    color: white !important;
+}
+
+ul {
+    list-style-type: none !important;
+    padding-left: 20px;
+}
+body {
+    background: rgba(105,105,105,1);
+    background: -moz-linear-gradient(top, rgba(105,105,105,1) 0%, rgba(105,105,105,1) 18%, rgba(110,110,110,1) 49%, rgba(99,99,99,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(105,105,105,1)), color-stop(18%, rgba(105,105,105,1)), color-stop(49%, rgba(110,110,110,1)), color-stop(100%, rgba(99,99,99,1)));
+    background: -webkit-linear-gradient(top, rgba(105,105,105,1) 0%, rgba(105,105,105,1) 18%, rgba(110,110,110,1) 49%, rgba(99,99,99,1) 100%);
+    background: -o-linear-gradient(top, rgba(105,105,105,1) 0%, rgba(105,105,105,1) 18%, rgba(110,110,110,1) 49%, rgba(99,99,99,1) 100%);
+    background: -ms-linear-gradient(top, rgba(105,105,105,1) 0%, rgba(105,105,105,1) 18%, rgba(110,110,110,1) 49%, rgba(99,99,99,1) 100%);
+    background: linear-gradient(to bottom, rgba(105,105,105,1) 0%, rgba(105,105,105,1) 18%, rgba(110,110,110,1) 49%, rgba(99,99,99,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#696969', endColorstr='#636363', GradientType=0 );
+}
+
+.topbar {
+    background: linear-gradient(to bottom, rgba(247,247,247,1) 0%, rgba(227,227,227,1) 39%, rgba(227,227,227,1) 42%, rgba(255,255,255,1) 100%);
+        img {
+        height: 70px;
+        border-radius: 5px;
+        margin: 10px;
+    }
+}
+
+.nav-link {
+    border-radius: 0 !important;
+    border-right: 1px solid whitesmoke;
+    height: 100%;
+    padding: 20px !important;
+}
+
+.nav-link.active {
+    background: linear-gradient(to bottom, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%) !important;
+}
+
+.error {
+    background-color: tomato;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bordercard {
+  border: 4px solid darkgray !important;
+  img {
+      max-width: 200px;
+      max-height: 300px;
+      align-self: center;
+      margin-left: 15px;
+  }
+}
+

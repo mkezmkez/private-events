@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-6 offset-3">
+        
+        <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: name %>
+          <% end %>
+          <div class="mt-5">
+          
+        <%= bootstrap_form_for(:session, url: sessions_path) do |f| %>
+            <p class = "h3 text-warning pb-3"> login with any of these</p>
+            <%= f.text_field :name %>
+            <%= f.text_field :username %>
+            <%= f.email_field :email %>
+
+            <%= f.submit "Log in", class: "btn btn-warning d-flex justify-content-end" %>
+        <% end %>
+        </div>
+    </div>
+</div>
