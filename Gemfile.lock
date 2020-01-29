@@ -61,6 +61,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    childprocess (3.0.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -71,6 +72,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.6)
+    database_cleaner (1.7.0)
     diff-lcs (1.3)
     erubi (1.9.0)
     execjs (2.7.0)
@@ -193,6 +195,7 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.2)
     ruby_dep (1.5.0)
+    rubyzip (2.1.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -204,8 +207,13 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    selenium-webdriver (3.142.7)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     shellany (0.0.1)
     spring (2.1.0)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
@@ -232,6 +240,10 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webdrivers (4.2.0)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.3.0)
+      selenium-webdriver (>= 3.0, < 4.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -247,6 +259,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+  database_cleaner
   factory_bot_rails
   faker
   guard-rspec
@@ -259,12 +272,14 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   spring
+  spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webdrivers
 
 RUBY VERSION
    ruby 2.6.5p114
