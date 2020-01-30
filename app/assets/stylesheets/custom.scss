@@ -65,6 +65,19 @@ body {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+    .topbanner {
+        height: 500px;
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(231, 155, 40, 0.336)), url("5434.jpg");
+        height: 500px;
+        background-size: cover;
+        background-position-y: -152px !important;
+        left: 0;
+    }   
+}
+
+@media only screen and (min-width: 1001px) {
+
 .topbanner {
     height: 500px;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(231, 155, 40, 0.336)), url("5434.jpg");
@@ -72,4 +85,9 @@ body {
     background-size: cover;
     background-position-y: -280px;
     left: 0;
+}
+}
+
+.logout {
+    height: 30px;
 }

@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :require_login, only: [:new]
+  before_action :require_login, only: [:new, :create]
 
   def index
     @events = Event.all
@@ -16,7 +16,7 @@ class EventsController < ApplicationController
     @event = Event.new
     render :new
   end
-
+  
   def create
     @event = current_user.created_events.new(event_params)
     if @event.save
