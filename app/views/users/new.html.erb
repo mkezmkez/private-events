@@ -1,0 +1,11 @@
+<div class="row mt-5">
+    <div class="col-6 offset-3">
+        <h1 class="h1 text-center text-warning">join webvents</h1>
+        <%= bootstrap_form_for(@user) do |f| %>
+            <%= f.text_field :name %>
+            <%= f.text_field :username %>
+            <%= f.email_field :email %>
+            <%= f.submit "Sign Up", class:"btn btn-warning" %>
+        <% end %>
+    </div>
+</div>

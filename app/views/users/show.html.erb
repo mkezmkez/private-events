@@ -1,0 +1,46 @@
+<div class= "container mt-5">
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-4">
+                <img class='img-fluid' src="https://avatars3.githubusercontent.com/u/51313750?s=400&v=4" alt="">
+            </div>
+            <div class="col-6">
+                <p><%= @user.name %></p>
+                <p>e-mail: <%= @user.email %></p>
+                <p>username: <%= @user.username %> </p>
+                <% @user.created_events.each do |event| %>
+                    <div class= "col-12">
+                      <p> <%= event.title %> </p>
+                      <p> At <%= event.date %> | <%= event.date %>h </p>
+                      <p> <%= event.location %> </p>
+                      <p> <%= event.description %> </p>
+                    </div>
+              <% end %>
+              <div class="col-12">
+                  <div class="row">
+                    <div class="col-6">
+
+                      <p>Upcoming events:</p>
+                      <ul>
+                        <% @upcoming_events.each do |uevent| %>
+                          <li class="h3 card-title text-warning"><%= uevent.description %> | <%= uevent.date.day %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                    <div class="col-6">
+
+                      <h3>Previous Events</h3>
+                      <ul>
+                        <% @previous_events.each do |uevent| %>
+                          <li class="h3 card-title text-warning"><%= uevent.description %> | <%= uevent.date.day %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
