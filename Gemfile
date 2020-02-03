@@ -42,13 +42,9 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-<<<<<<< HEAD
-  
-=======
   gem 'spring-commands-rspec'
   # set up for capybara
   gem 'database_cleaner'
->>>>>>> private-members
 end
 
 group :development do
