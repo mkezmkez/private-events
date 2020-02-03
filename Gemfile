@@ -38,12 +38,17 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+<<<<<<< HEAD
   
+=======
+  gem 'spring-commands-rspec'
+  # set up for capybara
+  gem 'database_cleaner'
+>>>>>>> private-members
 end
 
 group :development do
@@ -61,6 +66,9 @@ group :test do
   gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
+  #  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'webdrivers'
 end
 
 group :production do
