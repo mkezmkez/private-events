@@ -98,7 +98,7 @@ It is recommended to deploy in Heroku, you'll need to open a Heroku account in h
 <!-- CONTRIBUTING --> 
 ## Contributing
 
-Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -116,8 +116,7 @@ Open License
 <!-- CONTACT -->
 ## Contact
 
-Luis Puente - [@mkezmkez](https://twitter.com/mkezkmez)
-Linkedin(https://www.linkedin.com/in/luis-puente-431114191/)
+Luis Puente - [@mkezmkez](https://twitter.com/mkezkmez) [Linkedin](https://www.linkedin.com/in/luis-puente-431114191/)
 Carlos De Medeiros [@camfilho](https://twitter.com/camfilho)
 
 
