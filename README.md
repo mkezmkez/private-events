@@ -41,25 +41,22 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Acknowledgments](#acknowledgments)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Rails allows us to build complex apps with databases using merely a few lines of code. By understanding Active records, we can easly create and manipulate data and even store it in the database without actually writing any SQL commands.
+By using Rails we can build complex apps with databases using merely a few lines of code. By understanding Active records, we can easily create and manipulate data and even store it in the database without actually writing any SQL commands.
 
 ----
 The goal of this project is to apply multiple associations between the tables of our schema.
 
-Starting date January 24th 2020
-Send to Code Review January 29th 2020 
-
 
 <br>
 <br>
-For more details about the Project and it's requirements go to <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations"> The Odin Project</a>
+For more details about the project and its requirements go to <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations"> The Odin Project</a>
 
 ### Built With
 
@@ -85,27 +82,27 @@ Run the tests with the following command
 ````
 $ bundle exec rspec
 ````
-Get it working in your localserver use this line in the terminal
+Get it working in your local server use this line in the terminal
 ````
 $ rails s
 ````
-It is recommended to deploy in Heroku, you'll need to open a heroku account in herokuapp.com
+It is recommended to deploy in Heroku, you'll need to open a Heroku account in herokuapp.com
 
 <!-- UPCOMING FEATURES -->
 ## Upcoming features
 * Live webinar integration for up to 200 participants
 * Webinar recording and tracking of guest's contact information
-* Post webvent survey
+* Post webinar survey
 
 
 <!-- CONTRIBUTING --> 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
@@ -114,21 +111,20 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-No licenses required as project was developed in educational eviroment.
-
+Open License
 
 <!-- CONTACT -->
 ## Contact
 
 Luis Puente - [@mkezmkez](https://twitter.com/mkezkmez)
+Linkedin(https://www.linkedin.com/in/luis-puente-431114191/)
 Carlos De Medeiros [@camfilho](https://twitter.com/camfilho)
-Project Link: [github.com/mkezmkez/ruby-enumerables](https://github.com/camfilho/micro-reddit)
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
 * [CARLOS DE MEDEIROS](https://github.com/camfilho)
-* [LUIS PUENTE](https://github.com/mkezmkez)
+* [LUIS PUENTE](https://github.com/mkezmkez) [Linkedin](linkedin.com/in/luis-puente-431114191/)
 
