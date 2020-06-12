@@ -79,8 +79,13 @@ $ git clone git@github.com:camfilho/private-events.git
 CD into the folder
 ````
 $ cd private-events
+$ bundle install
 ````
-To run it in your localserver use this line in the terminal
+Run the tests with the following command
+````
+$ bundle exec rspec
+````
+Get it working in your localserver use this line in the terminal
 ````
 $ rails s
 ````
