@@ -16,7 +16,7 @@
 <br> 
   <a href="https://radiant-shore-51585.herokuapp.com/">View Demo</a>
 <br> 
-    <a href="https://github.com/mkezmkez/members-only/issues  ">Request Feature</a>
+    <a href="https://github.com/mkezmkez/members-only/issues">Request Feature</a>
 <br> 
 
 <br> 
