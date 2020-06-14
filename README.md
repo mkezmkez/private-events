@@ -3,8 +3,8 @@
 <br />
 <p align="center">
   <a href="https://github.com/mkezmkez/members-only/tree/development">
-    <img src="https://github.com/mkezmkez/appleclone/raw/master/assets/microverse-logo.png" alt="Logo" width="80" height="80">
-  </a>
+     <img src="https://github.com/mkezmkez/appleclone/raw/master/assets/microverse-logo.png" alt="Logo" width="80" height="80">
+   </a>
  
   <h3 align="center">Ruby on Rails. Associations - Private Events </h3>
 
